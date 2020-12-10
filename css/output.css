@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Fluo";
+  src: url("../fonts/Fluo Gums.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #a88455;
+  background: -webkit-linear-gradient(legacy-direction(135deg), #a88455, #8b5c8b);
+  background: linear-gradient(135deg, #a88455, #8b5c8b);
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background: #262626;
+  z-index: 12;
+  position: fixed;
+  overflow: hidden;
+}
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  position: relative;
+  float: right;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 50px;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  float: left;
+  margin: 25px;
+}
+nav img {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  height: 50px;
+  width: auto;
+}
+
+.logo {
+  float: left;
+  line-height: 100px;
+  font-family: Fluo;
+  font-size: x-large;
+}
+.logo img {
+  float: left;
+  width: auto;
+  height: 100px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=output.css.map */
