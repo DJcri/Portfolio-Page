@@ -1,3 +1,6 @@
+//Variables
+$headerColor: #262626;
+$headerHeight: 100px;
 //Custom Fonts
 @font-face {
   font-family: "Fluo";
@@ -32,25 +35,25 @@ body {
 }
 
 .wrapper {
+  position: relative;
   max-width: 1170px;
   margin: 0 auto;
 }
 
 header {
-  height: 100px;
+  height: $headerHeight;
   width: 100%;
-  background: #262626;
+  background: $headerColor;
   z-index: 12;
   position: fixed;
   a {
     @include headerLink();
   }
-  overflow: hidden;
 }
 
 nav {
-  position: relative;
-  float: right;
+  position: absolute;
+  right: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 50px;
   ul {
@@ -81,6 +84,33 @@ nav {
   }
 }
 
+.drop-down {
+  visibility: hidden;
+}
+
 .hidden {
   visibility: hidden;
+}
+
+@media screen and (max-width: 850px) {
+  .drop-down {
+    visibility: visible;
+  }
+  .default-nav {
+    li {
+      float: none;
+      position: relative;
+      top: $headerHeight;
+      margin: 0;
+      a {
+        width: 100px;
+        float: right;
+        padding: 0 15px;
+        background-color: $headerColor;
+      }
+      a:hover {
+        background-color: lighten($headerColor, 5);
+      }
+    }
+  }
 }

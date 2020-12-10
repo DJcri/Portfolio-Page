@@ -18,6 +18,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   max-width: 1170px;
   margin: 0 auto;
 }
@@ -28,7 +29,6 @@ header {
   background: #262626;
   z-index: 12;
   position: fixed;
-  overflow: hidden;
 }
 header a {
   text-decoration: none;
@@ -36,8 +36,8 @@ header a {
 }
 
 nav {
-  position: relative;
-  float: right;
+  position: absolute;
+  right: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 50px;
 }
@@ -68,8 +68,34 @@ nav img {
   height: 100px;
 }
 
+.drop-down {
+  visibility: hidden;
+}
+
 .hidden {
   visibility: hidden;
+}
+
+@media screen and (max-width: 850px) {
+  .drop-down {
+    visibility: visible;
+  }
+
+  .default-nav li {
+    float: none;
+    position: relative;
+    top: 100px;
+    margin: 0;
+  }
+  .default-nav li a {
+    width: 100px;
+    float: right;
+    padding: 0 15px;
+    background-color: #262626;
+  }
+  .default-nav li a:hover {
+    background-color: #333333;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
